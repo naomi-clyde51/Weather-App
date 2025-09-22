@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--SheCodes logo-->
+      <div class="image-box"></div>
+
+      <!-- City input + search button -->
+      <input type="text" placeholder="Enter a city..." /><input
+        type="submit"
+        value="Search"
+      />
+
+      <br />
+
+      <div class="city+temp">
+        <!--City name + day + time + clouds + humidity (%) + wind (7.2 km/h)-->
+        <h2>San Francisco</h2>
+        <p>Wednesday 00:11, few clouds</p>
+        <p>Humidity: 76%, Wind: 72km/h</p>
+
+        <br />
+
+        <!--Temperature (degrees)-->
+        <div class="current-temp">
+          🌞
+          <h1 class="current--temp__heading">18</h1>
+          <small>° C</small>
+        </div>
+      </div>
+
+      <br />
+
+      <!--Forecast for the next 5 days-->
+      <div class="forecast">
+        <ul>
+          <li>
+            Tue
+            <br />
+            🌞
+            <strong>14°C</strong> -18°C
+          </li>
+          <br />
+          <li>
+            Wed
+            <br />
+            🌞
+            <strong>14°C</strong> -18°C
+          </li>
+          <br />
+          <li>
+            Thu
+            <br />
+            🌞
+            <strong>14°C</strong> -18°C
+          </li>
+          <br />
+          <li>
+            Fri
+            <br />
+            🌞
+            <strong>14°C</strong> -18°C
+          </li>
+          <br />
+          <li>
+            Sat
+            <br />
+            🌞
+            <strong>14°C</strong> -18°C
+          </li>
+          <br />
+        </ul>
+      </div>
+
+      <br />
+      <hr />
+
+      <!--Footer-->
+      <footer>
+        <p class="footer">
+          This project was coded by <a href="">SheCodes</a> and is
+          <a href="">open-sourced on GitHub</a> and
+          <a href="">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
