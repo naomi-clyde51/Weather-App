@@ -1,5 +1,6 @@
-function searchBtn() {
-
+function searchCity() {
+alert("Hello");
 }
 
-let sea = document.querySelector("")
+let searchBtn = document.querySelector(".search-btn");
+.search-btn.addEventListener('click', searchCity);

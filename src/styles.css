@@ -1,27 +1,45 @@
 :root {
-    -- primary-color: black;
--- secondary-color: rgb(240, 243, 255);
+    --primary-color: rgb(136, 97, 255);
+--secondary-color: rgb(240, 243, 255);
 }
 
 body {
-    background-color:var(primary--color);
+    background-color:var(--secondary-color);
+    font-family: ;
 }
 
 .container__wrapper {
     background-color: white;
-    margin: 50px 300px;
+    margin: 50px 400px;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.142);
 }
 
 .search-bar {
-    border: none;
-
+    border-style: none;
 }
 
+/*.search-bar selected {
+    
+}*/
+
 .search-btn {
-    background-color: var();
+    background-color: var(--primary-color);
+    border-style: none;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+}
+
+.search-btn:hover {
+cursor: pointer;
+background-color: var(--primary-color);
+opacity: 0.85;
+}
+
+.city__temp {
+display: flex;
 }
 
 h1 {
@@ -41,6 +59,7 @@ list-style: none;
  }
 
  footer p{
+    text-align: center;
     color: rgba(0, 0, 0, 0.516);
  }
 

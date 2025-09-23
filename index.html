@@ -15,20 +15,22 @@
     <div class="container__wrapper">
       <!-- City input + search button -->
       <div class="search-bar">
-        <input type="text" placeholder="Enter a city..." /><input class="search-btn"
-          type="submit"
-          value="Search"
-        />
+        <input
+          type="text"
+          placeholder="Enter a city..."
+          title="Please fill out this field."
+        /><input class="search-btn" type="submit" value="Search" />
       </div>
 
       <br />
 
       <div class="city__temp">
         <!--City name + day + time + clouds + humidity (%) + wind (7.2 km/h)-->
-        <h2>San Francisco</h2>
-        <p>Wednesday 00:11, few clouds</p>
-        <p>Humidity: 76%, Wind: 72km/h</p>
-
+        <div class="city__info">
+          <h2>San Francisco</h2>
+          <p>Wednesday 00:11, few clouds</p>
+          <p>Humidity: 76%, Wind: 72km/h</p>
+        </div>
         <br />
 
         <!--Temperature (degrees)-->
