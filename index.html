@@ -4,27 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="path/to/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/styles.css" />
     <script src="./src/script.js"></script>
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <!--SheCodes logo-->
-      <div class="image-box"></div>
-
+    <div class="container__wrapper">
       <!-- City input + search button -->
-      <input type="text" placeholder="Enter a city..." /><input
-        type="submit"
-        value="Search"
-      />
+      <div class="search-bar">
+        <input type="text" placeholder="Enter a city..." /><input class="search-btn"
+          type="submit"
+          value="Search"
+        />
+      </div>
 
       <br />
 
-      <div class="city+temp">
+      <div class="city__temp">
         <!--City name + day + time + clouds + humidity (%) + wind (7.2 km/h)-->
         <h2>San Francisco</h2>
         <p>Wednesday 00:11, few clouds</p>
@@ -35,7 +34,7 @@
         <!--Temperature (degrees)-->
         <div class="current-temp">
           🌞
-          <h1 class="current--temp__heading">18</h1>
+          <h1 class="current-temp__heading">18</h1>
           <small>° C</small>
         </div>
       </div>
@@ -90,8 +89,11 @@
       <footer>
         <p class="footer">
           This project was coded by Naomi Clyde and is
-          <a href="https://github.com/naomi-clyde51">open-sourced on GitHub</a> and
-          <a href="https://magnificent-parfait-5388c1.netlify.app/">hosted on Netlify</a>
+          <a href="https://github.com/naomi-clyde51">open-sourced on GitHub</a>
+          and
+          <a href="https://magnificent-parfait-5388c1.netlify.app/"
+            >hosted on Netlify</a
+          >
         </p>
       </footer>
     </div>

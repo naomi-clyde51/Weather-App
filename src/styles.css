@@ -1,0 +1,49 @@
+:root {
+    -- primary-color: black;
+-- secondary-color: rgb(240, 243, 255);
+}
+
+body {
+    background-color:var(primary--color);
+}
+
+.container__wrapper {
+    background-color: white;
+    margin: 50px 300px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.142);
+}
+
+.search-bar {
+    border: none;
+
+}
+
+.search-btn {
+    background-color: var();
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 64px;
+}
+
+ ul {
+display: flex;
+ }
+
+ li {
+list-style: none;
+ }
+
+ footer p{
+    color: rgba(0, 0, 0, 0.516);
+ }
+
+ footer a {
+    color:blueviolet;
+ }
