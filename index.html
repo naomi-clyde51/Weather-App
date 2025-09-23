@@ -22,29 +22,33 @@
         /><input class="search-btn" type="submit" value="Search" />
       </div>
 
+      <hr />
       <br />
 
       <div class="city__temp">
         <!--City name + day + time + clouds + humidity (%) + wind (7.2 km/h)-->
         <div class="city__info">
-          <h2>San Francisco</h2>
-          <p>Wednesday 00:11, few clouds</p>
-          <p>Humidity: 76%, Wind: 72km/h</p>
+          <h2 class="city__name">San Francisco</h2>
+          <div class="city__temp--info">
+            <p>Wednesday 00:11, few clouds</p>
+            <p>
+              Humidity: <span style="color: red"><strong>76%</strong></span
+              >, Wind: <span style="color: red"><strong>72km/h</strong></span>
+            </p>
+          </div>
         </div>
         <br />
 
         <!--Temperature (degrees)-->
         <div class="current-temp">
-          🌞
-          <h1 class="current-temp__heading">18</h1>
-          <small>° C</small>
+          <h1 class="current-temp__heading">🌞 18<small>°C</small></h1>
         </div>
       </div>
 
       <br />
 
       <!--Forecast for the next 5 days-->
-      <div class="forecast">
+      <!--<div class="forecast">
         <ul>
           <li>
             Tue
@@ -82,7 +86,7 @@
           </li>
           <br />
         </ul>
-      </div>
+      </div>-->
 
       <br />
       <hr />
@@ -91,7 +95,9 @@
       <footer>
         <p class="footer">
           This project was coded by Naomi Clyde and is
-          <a href="https://github.com/naomi-clyde51">open-sourced on GitHub</a>
+          <a href="https://github.com/naomi-clyde51/Weather-App"
+            >open-sourced on GitHub</a
+          >
           and
           <a href="https://magnificent-parfait-5388c1.netlify.app/"
             >hosted on Netlify</a
