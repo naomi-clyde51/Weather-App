@@ -7,19 +7,26 @@
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./src/styles.css" />
-    <script src="./src/script.js"></script>
-    <title>Weather App</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <!-- Call/Get information that apiUrl will display-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>My Weather Application</title>
   </head>
   <body>
     <div class="container__wrapper">
       <!-- City input + search button -->
       <div class="search-bar">
-        <input
-          type="text"
-          placeholder="Enter a city..."
-          title="Please fill out this field."
-        /><input class="search-btn" type="submit" value="Search" />
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Search for a city..."
+            autocomplete="off"
+            autofocus="on"
+            id="search-text-input"
+          />
+
+          <input class="search-btn" type="submit" value="Search" />
+        </form>
       </div>
 
       <hr />
@@ -28,9 +35,12 @@
       <div class="city__temp">
         <!--City name + day + time + clouds + humidity (%) + wind (7.2 km/h)-->
         <div class="city__info">
-          <h2 class="city__name">San Francisco</h2>
+          <h2 id="city__name">San Francisco</h2>
+          <h1></h1>
           <div class="city__temp--info">
-            <p>Wednesday 00:11, few clouds</p>
+            <p id="current-day">Wednesday</p>
+            <p id="current-time">00:11</p>
+            <p>few clouds</p>
             <p>
               Humidity: <span style="color: red"><strong>76%</strong></span
               >, Wind: <span style="color: red"><strong>72km/h</strong></span>
@@ -40,6 +50,7 @@
         <br />
 
         <!--Temperature (degrees)-->
+        <div id="temperature"></div>
         <div class="current-temp">
           <h1 class="current-temp__heading">🌞 18<small>°C</small></h1>
         </div>
@@ -105,5 +116,7 @@
         </p>
       </footer>
     </div>
+    <script src="./src/javascript/script.js"></script>
+    <script src="./src/javascript/api.js"></script>
   </body>
 </html>
