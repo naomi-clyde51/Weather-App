@@ -53,3 +53,29 @@ function search(event) {
         // Event listener for the search form
     let searchForm = document.querySelector("#search-form");
     searchForm.addEventListener("submit", search);
+
+
+    // Forecast for next 5 days
+    
+    function displayForecast() {
+        let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let forecastHtml = "";
+        
+        days.forEach(function (day) {
+            forecastHtml += 
+            `<div class="forecast-style" id="forecast">
+            <ul>
+            <li>
+            ${day}
+            <br />
+            🌞
+            <strong>14°C</strong> -18°C
+            </li>
+            </ul>
+            </div>
+            `;
+        });
+        
+        let forecastElement = document.querySelector("#forecast");
+        forecastElement.innerHTML = forecastHtml;
+    }
