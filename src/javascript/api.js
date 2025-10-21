@@ -22,14 +22,15 @@ descriptionElement.innerHTML = `${description}`
 humidityElement.innerHTML = `${humidity}%`
 windElement.innerHTML = `${wind} km/h`
 iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" id="current-icon" alt="weather icon">`    
-    console.log(response);
+
+getForecast(response.data.city);
     
 }
 
 function searchCity(city) {
     let apiKey = "ffb73coa05d42e881774a7tbf603bb16";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(refreshWeather);
+    axios.get(apiUrl).then(displayForecast);
 }
 
 // Function to handle city search
@@ -56,8 +57,19 @@ function search(event) {
 
 
     // Forecast for next 5 days
+
+    function getForecast (city) {
+        let apiKey = "ffb73coa05d42e881774a7tbf603bb16";
+        let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayForecast);
+    }
     
-    function displayForecast() {
+    function displayForecast(response) {
+console.log(response.data);
+    
+
+
+
         let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let forecastHtml = "";
         
@@ -79,3 +91,5 @@ function search(event) {
         let forecastElement = document.querySelector("#forecast");
         forecastElement.innerHTML = forecastHtml;
     }
+
+    
