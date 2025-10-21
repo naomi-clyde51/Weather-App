@@ -35,31 +35,37 @@
       <div class="city__temp">
         <!--City name + day + time + clouds + humidity (%) + wind (7.2 km/h)-->
         <div class="city__info">
-          <h2 id="city__name">San Francisco</h2>
-          <h1></h1>
+          <h3 id="city-loading"></h3>
+          <h2 id="city__name"></h2>
           <div class="city__temp--info">
-            <p id="current-day">Wednesday</p>
-            <p id="current-time">00:11</p>
-            <p>few clouds</p>
+            <p id="current-day"></p>
+            <p id="current-time"></p>
+            <p id="current-description"></p>
             <p>
-              Humidity: <span style="color: red"><strong>76%</strong></span
-              >, Wind: <span style="color: red"><strong>72km/h</strong></span>
+              Humidity:
+              <span style="color: red"
+                ><strong id="current-humidity"></strong></span
+              >, Wind:
+              <span style="color: red"
+                ><strong id="current-wind"></strong
+              ></span>
             </p>
           </div>
         </div>
         <br />
 
         <!--Temperature (degrees)-->
-        <div id="temperature"></div>
-        <div class="current-temp">
-          <h1 class="current-temp__heading">🌞 18<small>°C</small></h1>
+        <div class="current-temperature">
+          <img class="icon" id="current-icon" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="weather icon">
+          <h1 id="current-temp__heading">
+          </h1>
         </div>
       </div>
 
       <br />
 
       <!--Forecast for the next 5 days-->
-      <!--<div class="forecast">
+      <div class="forecast">
         <ul>
           <li>
             Tue
@@ -97,7 +103,7 @@
           </li>
           <br />
         </ul>
-      </div>-->
+      </div>
 
       <br />
       <hr />
@@ -110,9 +116,7 @@
             >open-sourced on GitHub</a
           >
           and
-          <a href="https://magnificent-parfait-5388c1.netlify.app/"
-            >hosted on Netlify</a
-          >
+          <a href="https://naomi-weather-app.netlify.app/">hosted on Netlify</a>
         </p>
       </footer>
     </div>

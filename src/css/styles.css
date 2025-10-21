@@ -46,7 +46,7 @@ justify-content: space-between;
 padding: 0;
 }
 
-.current-temp {
+.current-temperature {
     display: flex;
 }
 
@@ -75,9 +75,11 @@ display: flex;
 
  li {
 list-style: none;
+font-size: 20px;
 margin: 20px;
 padding: 20px;
-background-color: rgba(128, 128, 128, 0.456);
+border-radius: 8px;
+background-color: rgba(224, 224, 224, 0.456);
  }
 
  footer p{
