@@ -41,15 +41,10 @@
             <p id="current-day"></p>
             <p id="current-time"></p>
             <p id="current-description"></p>
-            <p>
-              Humidity:
-              <span style="color: red"
-                ><strong id="current-humidity"></strong></span
-              >, Wind:
-              <span style="color: red"
-                ><strong id="current-wind"></strong
-              ></span>
-            </p>
+            <div class="humidity-and-wind">
+              <p id="current-humidity"></p>
+              <p id="current-wind"></p>
+            </div>
           </div>
         </div>
         <br />
@@ -66,7 +61,7 @@
       <br />
 
       <!--Forecast for the next 5 days-->
-      <div class="forecast-style" id="forecast"></div>
+      <div class="weather-forecast-day" id="forecast"></div>
 
       <br />
       <hr />

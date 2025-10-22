@@ -15,12 +15,17 @@ let description = response.data.condition.description;
 let humidity = response.data.temperature.humidity;
 let wind = Math.round(response.data.wind.speed);
 
+
 temperatureElement.innerHTML = `${temperature}°F`
 //emojiElement.innerHTML = `${emoji}`
 cityElement.innerHTML = `${cityinput}`
 descriptionElement.innerHTML = `${description}`
-humidityElement.innerHTML = `${humidity}%`
-windElement.innerHTML = `${wind} km/h`
+humidityElement.innerHTML = `Humidity: <span style="color: red"
+                ><strong>${humidity}%</strong></span
+              >`
+windElement.innerHTML = `Wind: <span style="color: red"
+                ><strong>${wind}%</strong></span
+              >`
 iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" id="current-icon" alt="weather icon">`    
 
 getForecast(response.data.city);
@@ -77,17 +82,18 @@ let forecastHtml = "";
         response.data.daily.forEach(function (day, index) {
             if (index < 5) {
             forecastHtml += 
-            `<div class="forecast-style" id="forecast">
-            <ul>
-            <div class="weather-forecast-date">${formatDay(day.time)}</div>
-            <li>
-            ${day}
-            <br />
-            <img src"${day.condition.icon_url}"/>
-            <strong>${Math.round(day.temperature.maximum)}°F</strong> ${Math.round(day.temperature.minimum)}°F
-            </li>
-            </ul>
-            </div>
+            `<div class="weather-forecast-day">
+        <div class="weather-forecast-date">${formatDay(day.time)}</div>
+        <div class="weather-forecast-icon">
+        <img src="${day.condition.icon_url}"
+        </div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">
+            <strong>${Math.round(day.temperature.minimum)}</strong>
+          </div>
+          <div class="weather-forecast-temperature">${Math.round(day.temperature.minimum)}</div>
+        </div>
+      </div>
             `;}
         });
         

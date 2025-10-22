@@ -69,17 +69,13 @@ h2 {
     font-size: 36px;
 }
 
- .forecast-style {
-display: flex;
- }
+.humidity-and-wind {
+    display: flex;
+}
 
- li {
-list-style: none;
-font-size: 20px;
-margin: 20px;
-padding: 20px;
-border-radius: 8px;
-background-color: rgba(224, 224, 224, 0.456);
+ .weather-forecast-day {
+display: flex;
+    justify-content: space-around;
  }
 
  footer p{
