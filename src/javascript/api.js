@@ -1,7 +1,7 @@
 function refreshWeather(response) {
     
     let temperatureElement = document.querySelector("#current-temp__heading");
-    let emojiElement = document.querySelector("#current-icon");
+    //let emojiElement = document.querySelector("#current-icon");
     let cityElement = document.querySelector("#city__name");
     let descriptionElement = document.querySelector("#current-description");
     let humidityElement = document.querySelector("#current-humidity");
@@ -9,14 +9,14 @@ function refreshWeather(response) {
 let iconElement = document.querySelector("#current-icon");
 
 let temperature = Math.round(response.data.temperature.current);
-let emoji = response.data.condition.icon;
+//let emoji = response.data.condition.icon;
 let cityinput = response.data.city;
 let description = response.data.condition.description;
 let humidity = response.data.temperature.humidity;
 let wind = Math.round(response.data.wind.speed);
 
 temperatureElement.innerHTML = `${temperature}°F`
-emojiElement.innerHTML = `${emoji}`
+//emojiElement.innerHTML = `${emoji}`
 cityElement.innerHTML = `${cityinput}`
 descriptionElement.innerHTML = `${description}`
 humidityElement.innerHTML = `${humidity}%`
